@@ -9,7 +9,6 @@
   </head>
   <body>
 
-    <!-- Navbar de Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">Mi Sitio</a>
@@ -26,24 +25,68 @@
       </div>
     </nav>
 
-    <!-- Formulario de login -->
     <div class="contenido">
       <h1>Bienvenido</h1>
-      <h2>Iniciar Sesión</h2>
-
+      <h2>Iniciar Sesion</h2>
       <div class="mb-3">
-        <label for="username"><strong>Usuario:</strong></label>
-        <br />
-        <input type="text" id="username" name="username" placeholder="Tu usuario (root)" class="form-control" />
+        <label for="username"><strong>Usuario:</strong></label><br />
+        <input type="text" id="username" placeholder="Tu usuario (root)" class="form-control" />
       </div>
-
       <div class="mb-3">
-        <label for="password"><strong>Contraseña:</strong></label>
-        <br />
-        <input type="password" id="password" name="password" placeholder="Tu contraseña (root)" class="form-control" />
+        <label for="password"><strong>Contrasena:</strong></label><br />
+        <input type="password" id="password" placeholder="Tu contrasena (root)" class="form-control" />
       </div>
-
       <button id="login" class="btn btn-primary">Entrar</button>
+    </div>
+
+  
+    <div class="contenido">
+      <h2>Inscripcion</h2>
+
+      <div class="mb-3">
+        <label><strong>Como deseas participar?</strong></label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipo" id="rdInstitucion" value="institucion" />
+          <label class="form-check-label" for="rdInstitucion">Institucion</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipo" id="rdAsistente" value="asistente" />
+          <label class="form-check-label" for="rdAsistente">Asistente</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipo" id="rdPatrocinador" value="patrocinador" />
+          <label class="form-check-label" for="rdPatrocinador">Patrocinador</label>
+        </div>
+      </div>
+
+      <div id="infoTipo" class="alert alert-info" style="display:none;"></div>
+
+      <div class="mb-3">
+        <label for="selectPais"><strong>Pais:</strong></label>
+        <select id="selectPais" class="form-select">
+          <option value="">-- Selecciona un pais --</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="selectRegion"><strong>Region / Estado:</strong></label>
+        <select id="selectRegion" class="form-select">
+          <option value="">-- Selecciona primero un pais --</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="chkTerminos" />
+          <label class="form-check-label" for="chkTerminos">Acepto los terminos y condiciones</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="chkContacto" />
+          <label class="form-check-label" for="chkContacto">Deseo que me contacten</label>
+        </div>
+      </div>
+
+      <button id="btnEnviar" class="btn btn-success" disabled>Enviar inscripcion</button>
     </div>
 
     <footer>Mi sitio</footer>
